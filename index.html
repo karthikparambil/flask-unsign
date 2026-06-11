@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flask Unsign — Online Flask Session Cookie Decoder & Inspector Tool</title>
-  <meta name="description" content="Free online Flask session cookie decoder. Decode, inspect, and analyze Flask/Werkzeug session tokens instantly in your browser. No installation, no server — 100% client-side. Supports base64, zlib compression, and timestamp extraction.">
+  <title>Flask Unsign - Online Flask Session Cookie Decoder & Inspector Tool</title>
+  <meta name="description" content="Free online Flask session cookie decoder. Decode, inspect, and analyze Flask/Werkzeug session tokens instantly in your browser. No installation, no server - 100% client-side. Supports base64, zlib compression, and timestamp extraction.">
   <meta name="keywords" content="flask unsign, flask session decoder, flask cookie decoder, werkzeug session decoder, flask session cookie tool, decode flask token, flask session inspector, flask security tool, python flask session, flask base64 decoder, flask zlib decoder">
   <meta name="author" content="Karthik Parambil">
   <meta name="robots" content="index, follow">
@@ -12,13 +12,13 @@
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://flask-unsign.vercel.app/">
-  <meta property="og:title" content="Flask Unsign — Online Flask Session Cookie Decoder">
-  <meta property="og:description" content="Free online tool to decode and inspect Flask/Werkzeug session cookies. Base64, zlib, timestamps — all handled client-side. No server required.">
+  <meta property="og:title" content="Flask Unsign - Online Flask Session Cookie Decoder">
+  <meta property="og:description" content="Free online tool to decode and inspect Flask/Werkzeug session cookies. Base64, zlib, timestamps - all handled client-side. No server required.">
   <meta property="og:site_name" content="Flask Unsign">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Flask Unsign — Online Flask Session Cookie Decoder">
+  <meta name="twitter:title" content="Flask Unsign - Online Flask Session Cookie Decoder">
   <meta name="twitter:description" content="Decode and inspect Flask session tokens instantly in your browser. Free, open-source, and 100% client-side.">
 
   <meta name="theme-color" content="#d4ff00">
@@ -100,7 +100,7 @@
       <h1 class="hero-title">
         FLASK SESSION <span class="hero-highlight">DECODER.</span>
       </h1>
-      <p class="hero-sub">Paste any Flask/Werkzeug session token. Base64, zlib, timestamps — all handled client-side.</p>
+      <p class="hero-sub">Paste any Flask/Werkzeug session token. Base64, zlib, timestamps - all handled client-side.</p>
     </header>
 
     <main class="main-grid">
@@ -139,27 +139,27 @@
         <div class="inspector-strip">
           <div class="inspect-cell">
             <span class="inspect-label">PARTS</span>
-            <span id="inspect-parts" class="inspect-value">—</span>
+            <span id="inspect-parts" class="inspect-value">-</span>
           </div>
           <div class="inspect-cell">
             <span class="inspect-label">COMPRESSED</span>
-            <span id="inspect-compressed" class="inspect-value">—</span>
+            <span id="inspect-compressed" class="inspect-value">-</span>
           </div>
           <div class="inspect-cell">
             <span class="inspect-label">TIMESTAMP</span>
-            <span id="inspect-timestamp" class="inspect-value">—</span>
+            <span id="inspect-timestamp" class="inspect-value">-</span>
           </div>
           <div class="inspect-cell">
             <span class="inspect-label">SIZE</span>
-            <span id="inspect-size" class="inspect-value">—</span>
+            <span id="inspect-size" class="inspect-value">-</span>
           </div>
           <div class="inspect-cell">
             <span class="inspect-label">KEYS</span>
-            <span id="inspect-keys" class="inspect-value">—</span>
+            <span id="inspect-keys" class="inspect-value">-</span>
           </div>
           <div class="inspect-cell">
             <span class="inspect-label">SIGNATURE</span>
-            <span id="inspect-signature" class="inspect-value">—</span>
+            <span id="inspect-signature" class="inspect-value">-</span>
           </div>
         </div>
 
@@ -196,18 +196,18 @@
     <section class="seo-content" aria-label="About Flask Unsign">
       <div class="seo-inner">
         <h2>What is Flask Unsign?</h2>
-        <p>Flask Unsign is a free, open-source online tool for decoding Flask session cookies. Flask and Werkzeug use a specific signed cookie format to store session data on the client side. This tool lets you paste any Flask session token and instantly decode the base64-encoded payload, detect zlib compression, extract embedded timestamps, and visualize the full JSON session data — all without sending anything to a server.</p>
+        <p>Flask Unsign is a free, open-source online tool for decoding Flask session cookies. Flask and Werkzeug use a specific signed cookie format to store session data on the client side. This tool lets you paste any Flask session token and instantly decode the base64-encoded payload, detect zlib compression, extract embedded timestamps, and visualize the full JSON session data - all without sending anything to a server.</p>
 
         <h2>How Does Flask Session Cookie Decoding Work?</h2>
         <p>Flask session cookies are base64url-encoded, optionally zlib-compressed, and signed with an HMAC. The cookie format consists of a payload, timestamp, and cryptographic signature separated by dots. Flask Unsign parses this structure, decodes the base64url payload, decompresses it if the leading byte indicates zlib compression, and then deserializes the JSON data for inspection. The signature is displayed but cannot be verified without the secret key.</p>
 
         <h2>Why Use This Tool?</h2>
         <ul>
-          <li><strong>100% Client-Side</strong> — Your session tokens never leave your browser. No data is transmitted to any server.</li>
-          <li><strong>No Installation Required</strong> — Unlike the <code>flask-unsign</code> CLI tool, this works directly in your browser.</li>
-          <li><strong>Security Research</strong> — Essential for penetration testing, CTF challenges, and web application security auditing.</li>
-          <li><strong>Instant Results</strong> — Paste a cookie and see the decoded payload immediately with syntax-highlighted JSON.</li>
-          <li><strong>Detailed Inspection</strong> — View compression status, timestamp, payload size, number of keys, and signature hash.</li>
+          <li><strong>100% Client-Side</strong> - Your session tokens never leave your browser. No data is transmitted to any server.</li>
+          <li><strong>No Installation Required</strong> - Unlike the <code>flask-unsign</code> CLI tool, this works directly in your browser.</li>
+          <li><strong>Security Research</strong> - Essential for penetration testing, CTF challenges, and web application security auditing.</li>
+          <li><strong>Instant Results</strong> - Paste a cookie and see the decoded payload immediately with syntax-highlighted JSON.</li>
+          <li><strong>Detailed Inspection</strong> - View compression status, timestamp, payload size, number of keys, and signature hash.</li>
         </ul>
 
         <h2>Frequently Asked Questions</h2>
@@ -217,7 +217,7 @@
         </details>
         <details>
           <summary>Is it safe to paste my session cookie here?</summary>
-          <p>Yes. This tool runs entirely in your browser using JavaScript. No data is sent to any server — you can verify this by checking the network tab in your browser's developer tools, or by reviewing the open-source code on GitHub.</p>
+          <p>Yes. This tool runs entirely in your browser using JavaScript. No data is sent to any server - you can verify this by checking the network tab in your browser's developer tools, or by reviewing the open-source code on GitHub.</p>
         </details>
         <details>
           <summary>What Flask session formats are supported?</summary>
@@ -248,7 +248,7 @@
           "name": "Is it safe to paste my session cookie here?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. This tool runs entirely in your browser using JavaScript. No data is sent to any server — you can verify this by checking the network tab in your browser's developer tools."
+            "text": "Yes. This tool runs entirely in your browser using JavaScript. No data is sent to any server - you can verify this by checking the network tab in your browser's developer tools."
           }
         },
         {
