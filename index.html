@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flask Session Cookie Decoder — Decode, inspect, and analyze Flask session tokens directly in your browser. No server required.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'none';">
+  <title>Flask Unsign Decoder</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-overlay"></div>
+
+  <div class="app-shell">
+    <nav class="top-bar">
+      <div class="top-bar-left">
+        <div class="logo-mark">
+          <span class="logo-bracket">[</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <span class="logo-bracket">]</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">FLASK UNSIGN</span>
+          <span class="logo-sep">/</span>
+          <span class="logo-tag">DECODER</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="status-dot"></div>
+        <span class="nav-label">CLIENT-SIDE ONLY</span>
+        <span class="nav-divider">|</span>
+        <a href="https://github.com/Paradoxis/Flask-Unsign" target="_blank" rel="noopener" class="nav-link">
+          GITHUB ↗
+        </a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1 class="hero-title">
+        FLASK SESSION <span class="hero-highlight">DECODER.</span>
+      </h1>
+      <p class="hero-sub">Paste any Flask/Werkzeug session token. Base64, zlib, timestamps — all handled client-side.</p>
+    </header>
+
+    <main class="main-grid">
+      <section class="panel input-panel" id="input-panel">
+        <div class="panel-header">
+          <span class="panel-label">// INPUT</span>
+          <div class="panel-actions">
+            <button id="btn-paste" class="action-btn">[PASTE]</button>
+            <button id="btn-clear" class="action-btn">[CLEAR]</button>
+          </div>
+        </div>
+        <div class="input-area">
+          <textarea id="cookie-input" placeholder="eyJhbGciOiJIUzI1NiIs..." spellcheck="false" autocomplete="off"></textarea>
+        </div>
+        <div class="input-bar">
+          <span id="char-count" class="char-count">[0 chars]</span>
+
+          <button id="btn-decode" class="decode-btn" disabled>
+            <span class="decode-text">DECODE →</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="output-section" class="output-area hidden">
+        <div class="panel output-panel">
+          <div class="panel-header">
+            <span class="panel-label">// DECODED PAYLOAD</span>
+            <div class="panel-actions">
+              <button id="btn-copy-json" class="action-btn">[COPY]</button>
+              <button id="btn-toggle-raw" class="action-btn">[RAW]</button>
+            </div>
+          </div>
+          <div id="json-output" class="json-output"></div>
+        </div>
+
+        <div class="inspector-strip">
+          <div class="inspect-cell">
+            <span class="inspect-label">PARTS</span>
+            <span id="inspect-parts" class="inspect-value">—</span>
+          </div>
+          <div class="inspect-cell">
+            <span class="inspect-label">COMPRESSED</span>
+            <span id="inspect-compressed" class="inspect-value">—</span>
+          </div>
+          <div class="inspect-cell">
+            <span class="inspect-label">TIMESTAMP</span>
+            <span id="inspect-timestamp" class="inspect-value">—</span>
+          </div>
+          <div class="inspect-cell">
+            <span class="inspect-label">SIZE</span>
+            <span id="inspect-size" class="inspect-value">—</span>
+          </div>
+          <div class="inspect-cell">
+            <span class="inspect-label">KEYS</span>
+            <span id="inspect-keys" class="inspect-value">—</span>
+          </div>
+          <div class="inspect-cell">
+            <span class="inspect-label">SIGNATURE</span>
+            <span id="inspect-signature" class="inspect-value">—</span>
+          </div>
+        </div>
+
+        <div class="panel table-panel">
+          <div class="panel-header">
+            <span class="panel-label">// SESSION DATA</span>
+          </div>
+          <div id="data-table-wrapper" class="data-table-wrapper"></div>
+        </div>
+      </section>
+
+      <section id="error-section" class="error-section hidden">
+        <div class="panel error-panel">
+          <div class="error-header">
+            <span class="error-badge">✕ ERROR</span>
+            <h3 id="error-title">DECODE FAILED</h3>
+          </div>
+          <p id="error-message" class="error-msg"></p>
+          <details id="error-details" class="error-details">
+            <summary>STACK TRACE</summary>
+            <pre id="error-stack"></pre>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-line"></div>
+      <div class="footer-content">
+        <span>BUILT FOR SECURITY RESEARCH</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="decoder.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
